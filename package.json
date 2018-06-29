@@ -1,0 +1,33 @@
+{
+  "name": "computorv1",
+  "version": "0.0.1",
+  "description": "Program that solves polynomial equation",
+  "main": "index.js",
+  "scripts": {
+    "test": "./index.js",
+    "flow": "flow",
+    "flow:check": "flow check ./src/",
+    "flow:deps": "flow-typed install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeiKaptelin/computorv1.git"
+  },
+  "keywords": [
+    "computorv1",
+    "js",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Sergei Kaptelin <serhii.kaptelin@gmail.com> (github.com/SergeiKaptelin)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeiKaptelin/computorv1/issues"
+  },
+  "homepage": "https://github.com/SergeiKaptelin/computorv1#readme",
+  "dependencies": {
+    "colors": "^1.3.0",
+    "flow-bin": "^0.75.0",
+    "flow-typed": "^2.4.0"
+  }
+}
