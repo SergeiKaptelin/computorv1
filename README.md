@@ -7,6 +7,7 @@
  npm run flow:deps
  ```
  `npm install` - to install dependencies
+ <br/>
  `npm run flow:deps` - will do `flow-typed install` and add packages to flow check
  
 # How to use:
