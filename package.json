@@ -4,7 +4,8 @@
   "description": "Program that solves polynomial equation",
   "main": "index.js",
   "scripts": {
-    "test": "./index.js",
+    "start": "npm run flow:check && npm run computor",
+    "computor": "./computor.js",
     "flow": "flow",
     "flow:check": "flow check ./src/",
     "flow:deps": "flow-typed install"
