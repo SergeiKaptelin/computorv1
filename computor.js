@@ -4,4 +4,6 @@
 
 const colors = require("colors/safe");
 
+console.log(process.argv);
+
 console.log(colors.green("computorv1"));
