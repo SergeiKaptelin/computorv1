@@ -1,3 +1,5 @@
+"use strict";
+
 const colors = require("colors/safe");
 
 const error = (message: string) => {
@@ -7,6 +9,7 @@ const error = (message: string) => {
 
 const usage = () => {
   console.log(colors.yellow("Usage: ./computor \"<exp> = <exp>\""));
+  console.log(colors.yellow("\texp - should be in format: ±a ± bx ± cx^2"));
   process.exit(0);
 };
 
