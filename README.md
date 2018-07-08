@@ -12,6 +12,12 @@
  
 # How to use:
  ```sh
- node computor
+ npm start -- "<exp> = <exp>"
+ ```
+`exp` - should be in format: ±a ± bx ± cx^2
+
+E.g.: 
+ ```sh
+ npm start -- "5 + 4 * X + X^2 = X^2"
  ```
  
