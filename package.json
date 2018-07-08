@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run flow:check && npm run flow:build && npm run computor",
-    "computor": "./dist/computor.js",
+    "computor": "./dist/Computor.js",
     "flow": "flow",
     "flow:check": "flow check ./src",
     "flow:deps": "flow-typed install",
-    "flow:build": "flow-remove-types ./src/ -d ./dist/ --all --pretty && chmod +x ./dist/computor.js"
+    "flow:build": "flow-remove-types ./src/ -d ./dist/ --all --pretty && chmod +x ./dist/Computor.js"
   },
   "repository": {
     "type": "git",
