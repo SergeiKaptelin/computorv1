@@ -13,7 +13,13 @@ const usage = () => {
   process.exit(0);
 };
 
+const message = (text: string) => {
+  console.log(colors.cyan(text));
+  process.exit(0);
+};
+
 module.exports = {
   error,
   usage,
+  message,
 };
