@@ -1,7 +1,5 @@
 "use strict";
 
-const {message} = require("./Notification");
-
 const getArguments = (formula: string): any => {
   const pol = {};
   pol.polDegree = 0;

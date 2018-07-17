@@ -12,7 +12,7 @@ const reducedForm = (reducedPolynomial: any): string => {
     }
   });
 
-  if (_.isEmpty(polynomial)) {
+  if (isOnlyPolDegree(polynomial) || _.isEmpty(polynomial)) {
     return "0 = 0";
   }
   if (polynomial.hasOwnProperty("0")) {
@@ -44,6 +44,11 @@ const reducedForm = (reducedPolynomial: any): string => {
   });
 
   return (`${solution} = 0`);
+};
+
+const isOnlyPolDegree = (polynomial: any): boolean => {
+  const keys = _.keys(polynomial);
+  return keys.length === 1 && keys[0] === "polDegree";
 };
 
 const isFirst = (reducedPolynomial: any, key: string) => _.keys(reducedPolynomial)[0] === key;

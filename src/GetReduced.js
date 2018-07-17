@@ -13,11 +13,12 @@ const getReduced = (leftExpression: any, rightExpression: any): any=> {
     }
   }
 
-  let degree = leftExpression.polDegree > rightExpression.polDegree ? leftExpression.polDegree : rightExpression.polDegree;
-  while (reducedPolinomial.hasOwnProperty(`${degree}`) && reducedPolinomial[`${degree}`] === 0 && degree > -1) {
-    degree -= 1;
+  reducedPolinomial.polDegree = 0;
+  for (const key in reducedPolinomial) {
+    if (key !== 'polDegree' && reducedPolinomial[key] !== 0) {
+      reducedPolinomial.polDegree = Number(key);
+    }
   }
-  reducedPolinomial.polDegree = degree;
 
   return reducedPolinomial;
 };
