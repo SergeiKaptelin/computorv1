@@ -19,7 +19,7 @@ const leftExpression = getArguments(formula[0]);
 const rightExpression = getArguments(formula[1]);
 const reducedPolynomial = getReduced(leftExpression, rightExpression);
 
-// console.log(colors.cyan("Reduced form:"), colors.green(reducedForm(reducedPolynomial)));
+console.log(colors.cyan("Reduced form:"), colors.green(reducedForm(reducedPolynomial)));
 console.log(colors.cyan("Polynomial degree:", colors.green(reducedPolynomial.polDegree)));
 
 if (reducedPolynomial.polDegree > 2) {
