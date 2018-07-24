@@ -20,6 +20,9 @@ const solutions = (reducedPolynomial: any) => {
     }
   } else if (polDegree === 1) {
     solution.x0 = - a / b;
+    if (solution.x0 === -0) {
+      solution.x0 = 0;
+    }
     solution.solutionMessage = "The solution is:";
   } else if (polDegree === 2) {
     solution.discriminant = b * b - 4 * a * c;

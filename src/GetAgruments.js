@@ -16,8 +16,8 @@ const getArguments = (formula: string): any => {
           const regExp = /\^([0-9]*)/g;
           const degree = regExp.exec(arg);
           if (degree) {
-            addCoefficient(degree[1], coef[0], pol);
             const degreeNumber = Number(degree[1]);
+            addCoefficient(`${degreeNumber}`, coef[0], pol);
             pol.polDegree = pol.polDegree > degreeNumber ? pol.polDegree : degreeNumber;
           }
         } else if (coef) {

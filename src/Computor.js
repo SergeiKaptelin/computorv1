@@ -9,16 +9,20 @@ const getArguments = require("./GetAgruments");
 const reducedForm = require("./ReducedForm");
 const getReduced = require("./GetReduced");
 const solutions = require("./Solutions");
+const validation = require("./Validation");
 
 if (process.argv.length < 3 || process.argv.length > 5) {
   usage();
 }
-const formula = process.argv.slice(2).join("").toUpperCase().split(" ").join("").split("=");
-if (formula.length !== 2) {
+const formula = process.argv.slice(2).join("");
+const expressions = formula.toUpperCase().split(" ").join("").split("=");
+if (expressions.length !== 2) {
   usage();
 }
-const leftExpression = getArguments(formula[0]);
-const rightExpression = getArguments(formula[1]);
+validation(formula);
+
+const leftExpression = getArguments(expressions[0]);
+const rightExpression = getArguments(expressions[1]);
 const reducedPolynomial = getReduced(leftExpression, rightExpression);
 
 console.log(colors.cyan("Reduced form:"), colors.green(reducedForm(reducedPolynomial)));
