@@ -1,5 +1,5 @@
 # computorv1
- Program that solves polynomial equation
+ Program that solves polynomial equation. [All task](computorv1.en.pdf)
  
 ## Install:
  ```sh
@@ -37,6 +37,5 @@ E.g.:
  ```sh
  npm test
  ```
- 
-
- 
+## Examples: 
+<img src="http://i104.fastpic.ru/big/2018/0729/ee/6cb638dd891f6ea1aecf82df44a129ee.jpg">
