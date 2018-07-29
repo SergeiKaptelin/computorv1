@@ -1,6 +1,8 @@
 "use strict";
 
-const _ = require('lodash')
+const _ = require('lodash');
+
+const {abs} = require("./Mathematic");
 
 const reducedForm = (reducedPolynomial: any): string => {
   let solution = "";
@@ -53,7 +55,7 @@ const isOnlyPolDegree = (polynomial: any): boolean => {
 
 const isFirst = (reducedPolynomial: any, key: string) => _.keys(reducedPolynomial)[0] === key;
 
-const formattedArgument = (value: number): string => value === 0 ? "" : `${sign(value)} ${Math.abs(value)}`;
+const formattedArgument = (value: number): string => value === 0 ? "" : `${sign(value)} ${abs(value)}`;
 
 const sign = (value: number): string => value < 0 ? "-" : "+";
 

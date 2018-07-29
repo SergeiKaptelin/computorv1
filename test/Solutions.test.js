@@ -315,8 +315,8 @@ describe("polynomial degree is 2", () => {
         discriminantMessage: "Discriminant is:",
         discriminant: -3,
         solutionMessage: "Discriminant is strictly negative, the two solutions are:",
-        x0: "-0.5 + 0.8660254037844386 * i",
-        x1: "-0.5 - 0.8660254037844386 * i",
+        x0: "-0.5 + 0.866025 * i",
+        x1: "-0.5 - 0.866025 * i",
       };
       expect(solutions(polynomial)).toEqual(result);
     });
@@ -332,8 +332,8 @@ describe("polynomial degree is 2", () => {
         discriminantMessage: "Discriminant is:",
         discriminant: -3,
         solutionMessage: "Discriminant is strictly negative, the two solutions are:",
-        x0: "-0.5 + 0.8660254037844386 * i",
-        x1: "-0.5 - 0.8660254037844386 * i",
+        x0: "-0.5 + 0.866025 * i",
+        x1: "-0.5 - 0.866025 * i",
       };
       expect(solutions(polynomial)).toEqual(result);
     });
@@ -385,8 +385,51 @@ describe("random polynomials", () => {
       discriminantMessage: "Discriminant is:",
       discriminant: -31,
       solutionMessage: "Discriminant is strictly negative, the two solutions are:",
-      x0: "0.75 + 1.3919410907075054 * i",
-      x1: "0.75 - 1.3919410907075054 * i",
+      x0: "0.75 + 1.391941 * i",
+      x1: "0.75 - 1.391941 * i",
+    };
+    expect(solutions(polynomial)).toEqual(result);
+  });
+
+  test("4 * X^0 + 4 * X^1 - 9.3 * X^2 = 0", () => {
+    const polynomial = {
+      "0": 4,
+      "1": 4,
+      "2": -9.3,
+      polDegree: 2,
+    };
+    const result = {
+      discriminantMessage: "Discriminant is:",
+      discriminant: 164.8,
+      solutionMessage: "Discriminant is strictly positive, the two solutions are:",
+      x0: -0.475131,
+      x1: 0.905239,
+    };
+    expect(solutions(polynomial)).toEqual(result);
+  });
+
+  test("1 * X^0 + 4 * X^1 = 0", () => {
+    const polynomial = {
+      "0": 1,
+      "1": 4,
+      polDegree: 1,
+    };
+    const result = {
+      solutionMessage: "The solution is:",
+      x0: -0.25,
+    };
+    expect(solutions(polynomial)).toEqual(result);
+  });
+
+  test("5 + 4x = 0", () => {
+    const polynomial = {
+      "0": 5,
+      "1": 4,
+      polDegree: 1,
+    };
+    const result = {
+      solutionMessage: "The solution is:",
+      x0: -1.25,
     };
     expect(solutions(polynomial)).toEqual(result);
   });

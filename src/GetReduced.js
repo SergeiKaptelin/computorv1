@@ -3,11 +3,14 @@
 const _ = require('lodash');
 
 const getReduced = (leftExpression: any, rightExpression: any): any=> {
-  const reducedPolinomial = {};
+  let reducedPolinomial = {};
   _.merge(reducedPolinomial, rightExpression);
+  for (const key in reducedPolinomial) {
+    reducedPolinomial[key] = 0;
+  }
   _.merge(reducedPolinomial, leftExpression);
 
-  for (let key in rightExpression) {
+  for (const key in rightExpression) {
     if (key !== 'polDegree') {
       reducedPolinomial[key] -= rightExpression[key];
     }
