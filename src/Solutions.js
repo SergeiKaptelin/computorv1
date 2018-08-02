@@ -43,7 +43,7 @@ const solutions = (reducedPolynomial: any) => {
       solution.x1 = dividendX1 === 0 ? 0 : formatted(dividendX1 / (2 * c));
       solution.solutionMessage = "Discriminant is strictly positive, the two solutions are:";
     } else if (solution.discriminant === 0) {
-      solution.x0  = (b === 0 && a === 0) ? 0 : formatted(-b / (2 * a));
+      solution.x0  = (b === 0 && a === 0) ? 0 : formatted(-b / (2 * c));
       solution.solutionMessage = "Discriminant is zero, the solution is:";
     } else {
       solution.x0 = `${formatted(-b / (2 * c))} + ${formatted(abs(sqrt(-solution.discriminant) / (2 * c)))} * i`;
