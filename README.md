@@ -1,5 +1,5 @@
 # computorv1
- Program that solves polynomial equation. [All task](computorv1.en.pdf)
+ Program that solves polynomial equation. [All task](computorv1.en.pdf) ([intra pdf](https://cdn.intra.42.fr/pdf/pdf/1181/computorv1.en.pdf))
  
 ## Install:
  ```sh
