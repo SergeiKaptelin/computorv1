@@ -26,7 +26,7 @@ const rightExpression = getArguments(expressions[1]);
 const reducedPolynomial = getReduced(leftExpression, rightExpression);
 
 console.log(colors.cyan("Reduced form:"), colors.green(reducedForm(reducedPolynomial)));
-console.log(colors.cyan("Polynomial degree:", colors.green(reducedPolynomial.polDegree)));
+console.log(colors.cyan("Polynomial degree:"), colors.green(reducedPolynomial.polDegree));
 
 if (reducedPolynomial.polDegree > 2) {
   console.log(colors.america("The polynomial degree is strictly greater than 2, I can't solve."));
@@ -34,7 +34,7 @@ if (reducedPolynomial.polDegree > 2) {
 }
 
 const {discriminantMessage, discriminant, solutionMessage, x0, x1} = solutions(reducedPolynomial);
-discriminantMessage && console.log(colors.cyan(discriminantMessage), colors.green(discriminant));
+discriminantMessage && console.log(colors.cyan(discriminantMessage), colors.green(`${discriminant}`));
 solutionMessage && console.log(colors.america(solutionMessage));
-(x0 || x0 === 0) && console.log(colors.green(x0));
-(x1 || x1 === 0) && console.log(colors.green(x1));
+(x0 || x0 === 0) && console.log(colors.green(`${x0}`));
+(x1 || x1 === 0) && console.log(colors.green(`${x1}`));
