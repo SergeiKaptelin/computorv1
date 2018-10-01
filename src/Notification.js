@@ -32,7 +32,7 @@ const validationError = (key: string, message: string) => {
 };
 
 const position = (index: number) => {
-  let pos = "🠅";
+  let pos = "↑";
   for (let i = index; i > 0; i = i - 1) {
     pos = `_${pos}`;
   }
